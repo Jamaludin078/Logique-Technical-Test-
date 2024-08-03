@@ -1,0 +1,12 @@
+C:\Jamal\Kazokku\Template\Web.Data\bin\Debug\net6.0\Web.Data.deps.json
+C:\Jamal\Kazokku\Template\Web.Data\bin\Debug\net6.0\Web.Data.dll
+C:\Jamal\Kazokku\Template\Web.Data\bin\Debug\net6.0\Web.Data.pdb
+C:\Jamal\Kazokku\Template\Web.Data\obj\Debug\net6.0\Web.Data.csproj.AssemblyReference.cache
+C:\Jamal\Kazokku\Template\Web.Data\obj\Debug\net6.0\Web.Data.GeneratedMSBuildEditorConfig.editorconfig
+C:\Jamal\Kazokku\Template\Web.Data\obj\Debug\net6.0\Web.Data.AssemblyInfoInputs.cache
+C:\Jamal\Kazokku\Template\Web.Data\obj\Debug\net6.0\Web.Data.AssemblyInfo.cs
+C:\Jamal\Kazokku\Template\Web.Data\obj\Debug\net6.0\Web.Data.csproj.CoreCompileInputs.cache
+C:\Jamal\Kazokku\Template\Web.Data\obj\Debug\net6.0\Web.Data.dll
+C:\Jamal\Kazokku\Template\Web.Data\obj\Debug\net6.0\refint\Web.Data.dll
+C:\Jamal\Kazokku\Template\Web.Data\obj\Debug\net6.0\Web.Data.pdb
+C:\Jamal\Kazokku\Template\Web.Data\obj\Debug\net6.0\ref\Web.Data.dll
