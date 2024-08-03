@@ -33,7 +33,7 @@
 						</div>
 						<div class="card-body">
 							@*<form id="form-registration" asp-action="RegisterMember" asp-controller="register" method="post">*@
-							<form id="form-registration">
+							<form id="form-registration" asp-action="RegisterMember" asp-asp-controller="Register" method="post">
 								<div class="row">
 									<div class="col-md-6">
 										<div class="form-group">
@@ -111,59 +111,35 @@
 	<script src="~/js/site.js" asp-append-version="true"></script>
 
 	<script type="text/javascript">
-		$('#form-registration').submit(function () {
+		//$('#form-registration').submit(function () {
 
-			var items = {
-				'FirstName': $('#FirstName').val(),
-				'LastName': $("#LastName").val(),
-				'Email': $("#Email").val(),
-				"Password": $("#Password").val(),// "2024-06-29T11:11:48.271Z",
-				'TNC': $("#TNC").val()
-			}
+		//	var items = {
+		//		'UserId': null,
+		//		'FirstName': $('#FirstName').val(),
+		//		'LastName': $("#LastName").val(),
+		//		'Email': $("#Email").val(),
+		//		'TNC': true,
+		//		'Password': $("#Password").val(),
+		//		'RegisterDate': null,
+		//		'MemberId': 0,
+		//		'CreateDate': null
 
-			//var someObj = {
-			//	FirstName: $('#FirstName').val(),
-			//	LastName: $('#LastName').val(),
-			//	Email: $('#Email').val(),
-			//	Password: $('#Password').val(),
-			//	TNC: $('#TNC').val()
-			//};
+		//	}
 
-			$.ajax({
-				type: "POST",
-				url: '/Register/RegisterMember',
-				data: JSON.stringify(items),
-				dataType: 'JSON',
-				contentType: 'application/json; charset=utf-8',
-				success: function (data) {
-					alert("S")
-				},
-				error: function () {
-					alert("There is some problem to adding the data.");
-				}
-			});
-
-			//var serializedForm = $(this).serialize();
-			////var valdata = $("#friendform").serialize();
-			////alert(valdata);
-			//$.ajax({
-			//	//url: '@Url.Action("RegisterMember")',
-			//	type: "POST",
-			//	url: '/Register/RegisterMember',
-			//	data: JSON.stringify(someObj),
-			//	dataType: 'JSON',
-			//	contentType: 'application/json; charset=utf-8',
-			//	success: function (result) {
-
-			//		alert("success " + result.UserName);
-			//	},
-			//	error: function (result) {
-			//		alert("Failed");
-			//	}
-
-			//});
-			//return false;
-		});
+		//	$.ajax({
+		//		type: "POST",
+		//		url: '/Register/Add',
+		//		data: JSON.stringify(items),
+		//		dataType: 'JSON',
+		//		contentType: 'application/json; charset=utf-8',
+		//		success: function (data) {
+		//			alert("S")
+		//		},
+		//		error: function () {
+		//			alert("There is some problem to adding the data.");
+		//		}
+		//	});
+		//});
 	</script>
 	@section Scripts{
 

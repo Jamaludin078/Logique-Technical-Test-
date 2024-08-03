@@ -1,5 +1,7 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
+﻿@model IEnumerable<Web.Data.Models.User>
+@{
+	ViewData["Title"] = "Home Page";
+	Layout = "_LayoutLTE";
 }
 
 @*<div class="text-center">
@@ -7,6 +9,85 @@
     <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
 </div>
 *@
+
+<section class="content-header">
+	<div class="container-fluid">
+		<div class="row mb-2">
+			<div class="col-sm-6">
+				<h1>Member List</h1>
+			</div>
+			<div class="col-sm-6">
+				<ol class="breadcrumb float-sm-right">
+					<li class="breadcrumb-item"><a href="#">Home</a></li>
+                    <li class="breadcrumb-item active">Home</li>
+				</ol>
+			</div>
+		</div>
+	</div><!-- /.container-fluid -->
+</section>
+
+<section class="content">
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-12">
+				<div class="card card-dark">
+					<div class="card-header">
+                        <h3 class="card-title">Member List</h3>
+						<div class="card-tools">
+							<button type="button" class="btn btn-tool" data-card-widget="collapse">
+								<i class="fas fa-minus"></i>
+							</button>
+						</div>
+					</div>
+					<!-- /.card-header -->
+					<div class="card-body">
+						<table id="example2" class="table table-bordered table-hover">
+							<thead>
+								<tr>
+									<th>No</th>
+                                    <th>@Html.DisplayNameFor(model => model.FirstName)</th>
+									<th>@Html.DisplayNameFor(model => model.LastName)</th>
+									<th>@Html.DisplayNameFor(model => model.Email)</th>
+									<th>@Html.DisplayNameFor(model => model.Member)</th>
+									<th>@Html.DisplayNameFor(model => model.RegisterDateFormatted)</th>
+									@*<th>Action</th>*@
+								</tr>
+							</thead>
+							<tbody>
+								@{
+                                    int numm = 1;
+									foreach (var m in Model)
+									{										
+										<tr>
+											<td>@numm</td>
+											<td>
+												@Html.DisplayFor(modelItem => m.FirstName)
+											</td>
+											<td>
+												@Html.DisplayFor(modelItem => m.LastName)
+											</td>
+											<td>
+												@Html.DisplayFor(modelItem => m.Email)
+											</td>
+											<td>
+												@Html.DisplayFor(modelItem => m.Member)
+											</td>
+											<td>
+												@Html.DisplayFor(modelItem => m.RegisterDateFormatted)
+											</td>
+										</tr>
+
+										++numm;
+									}
+								}
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
 @*
 <!-- Content Header (Page header) -->
 <div class="content-header">

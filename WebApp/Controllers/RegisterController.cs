@@ -9,8 +9,8 @@ namespace WebApp.Controllers
 	[AllowAnonymous]
 	public class RegisterController : Controller
 	{
-		readonly IWebHostEnvironment environment;
-		readonly string scheme = CookieAuthenticationDefaults.AuthenticationScheme;
+		//readonly IWebHostEnvironment environment;
+		//readonly string scheme = CookieAuthenticationDefaults.AuthenticationScheme;
 		private readonly UserService service;
 
 		public RegisterController(UserService service) => this.service = service;
@@ -21,20 +21,35 @@ namespace WebApp.Controllers
 
 		[HttpPost]
 		//[ValidateAntiForgeryToken]
-		public async Task<IActionResult> RegisterMember([FromBody] User TEntity)
+		public async Task<IActionResult> RegisterMember(User TEntity)
 		{
 			try
 			{
-				var res = await service.AddAsync(TEntity);
+				await service.AddAsync(TEntity);
 
-				//await service.AddAsync(TEntity);
-				return RedirectToAction("Index");
+				return RedirectToAction("Login", "Account");
 			}
 			catch (Exception ex)
 			{
 				return RedirectToAction("Index");
 			}
 
+		}
+
+		[HttpPost]
+		public async Task<JsonResult> Add(User TEntity)
+		{
+			try
+			{
+				var res = await service.AddAsync(TEntity);
+
+				//await service.AddAsync(TEntity);
+				return Json(new { Success = true, Message = "Success", Data = res });
+			}
+			catch (Exception ex)
+			{
+				return Json(new { Success = false, Message = "", Data = "" });
+			}
 		}
 	}
 }
